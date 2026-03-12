@@ -3,58 +3,126 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Work | Design.Co Portfolio</title>
+    <title>Work | Designer Portfolio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css">
-    <script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
-                    colors: { "primary": "#66ffdb", "background-light": "#f5f8f8", "background-dark": "#0f231e" },
-                    fontFamily: { "display": ["Inter", "sans-serif"] }
-                }
-            }
+                    colors: {
+                        "primary": "#66ffdb",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f231e",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                },
+            },
         }
     </script>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-100 antialiased">
-
-    <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
-        <div class="mx-auto max-w-7xl px-6 lg:px-12 flex h-20 items-center justify-between">
-            <div class="flex items-center gap-2 text-primary font-black tracking-tighter text-xl">
-                <span class="material-symbols-outlined text-3xl">terminal</span> DESIGN.CO
-            </div>
-            <nav class="hidden md:flex items-center gap-10">
-                <a class="text-sm font-medium hover:text-primary transition-colors text-slate-400" href="index.html">Home</a>
-                <a class="text-sm font-bold text-primary" href="work.html" aria-current="page">Work</a>
-                <a class="text-sm font-medium hover:text-primary transition-colors text-slate-400" href="about.html">About</a>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        
+        <header class="sticky top-0 z-50 w-full border-b border-slate-200/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+            <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4" aria-label="Main Navigation">
+                <div class="flex items-center gap-2 text-primary font-black tracking-tighter text-xl">
+                    <span class="material-symbols-outlined text-3xl" aria-hidden="true">terminal</span>
+                    <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">DESIGN.CO</h2>
+                </div>
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-sm font-bold text-primary" href="work.html" aria-current="page">Work</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="about.html">About</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="about.html#contact" class="rounded-lg bg-primary px-6 py-2 text-sm font-bold text-background-dark transition-transform active:scale-95">
+                        Hire Me
+                    </a>
+                </div>
             </nav>
-            <div class="hidden md:block">
-                <a href="about.html#contact" class="bg-primary text-background-dark px-6 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-all">Hire Me</a>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-20 lg:px-12">
-        <section>
-            <header class="mb-16">
-                <h1 class="text-5xl font-black tracking-tighter mb-4">Selected Projects</h1>
-                <p class="text-slate-500 max-w-2xl text-lg">A curated gallery of digital products and interface experiments.</p>
-            </header>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <article class="group space-y-6">
-                    <div class="aspect-video rounded-3xl overflow-hidden bg-slate-800 border border-white/5">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Fintech Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <main class="mx-auto flex w-full max-w-7xl flex-1 flex-col px-6 py-12 md:py-20">
+            <section class="mb-12 flex flex-col gap-4">
+                <h1 class="text-5xl font-black tracking-tighter text-slate-900 dark:text-white md:text-7xl">Selected Work</h1>
+                <p class="max-w-2xl text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    A curated selection of digital experiences, focusing on high-performance UI/UX design and scalable brand identities for technology-driven startups.
+                </p>
+            </section>
+
+            <div class="mb-12 flex flex-wrap items-center gap-2 border-b border-slate-200 dark:border-slate-800">
+                <button class="border-b-2 border-primary px-6 py-4 text-sm font-bold text-primary">All Projects</button>
+                <button class="border-b-2 border-transparent px-6 py-4 text-sm font-medium text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">UI/UX Design</button>
+                <button class="border-b-2 border-transparent px-6 py-4 text-sm font-medium text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">Mobile Apps</button>
+            </div>
+
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+                
+                <article class="group relative flex flex-col gap-6">
+                    <div class="aspect-video w-full overflow-hidden rounded-3xl bg-slate-800 border border-white/5">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" 
+                             alt="Fintech Dashboard Interface" 
+                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
                     </div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h2 class="text-2xl font-bold group-hover:text-primary transition-colors">Nexus Fintech Suite</h2>
-                            <p class="text-slate-500">Dashboard & Data Visualization</p>
+                    <div class="flex flex-col gap-3 px-2">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Nexus Fintech Suite</h3>
+                            <span class="text-xs font-bold font-mono uppercase tracking-widest text-primary/60">2024</span>
                         </div>
-                        <span class="text-primary/40 font-mono text-sm">2024</span>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Lead UI Designer • Full dashboard redesign focusing on complex data visualization and user accessibility.</p>
+                        <a class="mt-2 inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline" href="#">
+                            View Case Study <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                        </a>
                     </div>
-                    <a href="#" class="inline-flex items-center 
+                </article>
+
+                <article class="group relative flex flex-col gap-6">
+                    <div class="aspect-video w-full overflow-hidden rounded-3xl bg-slate-800 border border-white/5">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800" 
+                             alt="Health Monitor Mobile App" 
+                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    </div>
+                    <div class="flex flex-col gap-3 px-2">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Pulse Health Monitor</h3>
+                            <span class="text-xs font-bold font-mono uppercase tracking-widest text-primary/60">2023</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Product Designer • End-to-end mobile experience for real-time biometric tracking and doctor sync.</p>
+                        <a class="mt-2 inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline" href="#">
+                            View Case Study <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <section class="mt-32 rounded-3xl bg-primary/5 border border-primary/10 p-10 text-center md:p-20">
+                <h2 class="text-4xl font-black text-white md:text-6xl tracking-tighter">Let's build something <span class="text-primary">extraordinary</span></h2>
+                <p class="mx-auto mt-6 max-w-lg text-slate-400 text-lg">Currently available for freelance opportunities and long-term partnerships.</p>
+                <div class="mt-10 flex justify-center">
+                    <a href="about.html#contact" class="flex items-center gap-3 rounded-xl bg-primary px-10 py-5 text-lg font-black text-background-dark shadow-xl shadow-primary/20 transition-all hover:brightness-110 active:scale-95">
+                        Get In Touch <span class="material-symbols-outlined">mail</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-20 border-t border-slate-200 dark:border-slate-800 py-12">
+            <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
+                <div class="flex items-center gap-2 text-slate-500">
+                    <span class="text-sm font-medium">© 2026 DESIGN.CO • Created with Semantic HTML5</span>
+                </div>
+                <div class="flex gap-8">
+                    <a class="text-sm text-slate-400 hover:text-primary transition-colors" href="#">Twitter</a>
+                    <a class="text-sm text-slate-400 hover:text-primary transition-colors" href="#">Dribbble</a>
+                    <a class="text-sm text-slate-400 hover:text-primary transition-colors" href="#">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
